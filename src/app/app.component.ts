@@ -5,12 +5,10 @@ import { CalendarEvent } from 'angular-calendar';
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
-  styles: []
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'restobookingvda';
-
-  view: string = 'month';
 
   viewDate: Date = new Date();
 
