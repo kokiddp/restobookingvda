@@ -8,15 +8,15 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --output-path dist"
+    "postinstall": "ng build --aot --output-path dist"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.0.0",
-    "@angular/cli": "~7.0.2",
+    "@angular/cli": "^7.0.2",
     "@angular/common": "~7.0.0",
     "@angular/compiler": "~7.0.0",
-    "@angular/compiler-cli": "~7.0.0",
+    "@angular/compiler-cli": "^7.0.0",
     "@angular/core": "~7.0.0",
     "@angular/forms": "~7.0.0",
     "@angular/http": "~7.0.0",
