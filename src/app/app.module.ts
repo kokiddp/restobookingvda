@@ -24,8 +24,8 @@ import { AppComponent } from './app.component';
     MatButtonModule,
     MatCheckboxModule,
     CalendarModule.forRoot({
-		provide: DateAdapter,
-		useFactory: adapterFactory
+      provide: DateAdapter,
+      useFactory: adapterFactory
     })
   ],
   providers: [],
