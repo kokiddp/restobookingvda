@@ -42,6 +42,7 @@ var forceSSL = function() {
 }
 app.use(forceSSL());
 
+/*
 var error404 = function() {
 	return function(req, res) {
 		res.status(404).send('404 not found');
@@ -56,6 +57,7 @@ var error500 = function() {
 	}
 }
 app.use(error500());
+*/
 
 app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname + '/dist/index.html'));
