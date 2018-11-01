@@ -68,6 +68,10 @@ function handleError(res, reason, message, code) {
 	res.status(code || 500).json({"error": message});
 }
 
+app.get("/api/debug/mongodb", function(req, res) {
+	res.status(200).json(process.env.MONGODB_URI);
+});
+
 app.get("/api/users", function(req, res) {
 	handleError(res, "Not implemented", "Not implemented", 501);
 });
