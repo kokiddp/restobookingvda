@@ -9,12 +9,13 @@ var ObjectID = mongodb.ObjectID;
 var app = express();
 
 var db;
+var dbString = "mongodb://heroku_759xkrdf:rf6nb8dgi9fuu1ob5mrvlva9hl@ds247223.mlab.com:47223/heroku_759xkrdf";
 var USERS_COLLECTION = "users";
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/dist'));
 
-mongodb.MongoClient.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/test", function (err, client) {
+mongodb.MongoClient.connect(process.env.MONGODB_URI || dbString, function (err, client) {
 	if (err) {
 		console.log(err);
 		process.exit(1);
@@ -69,7 +70,7 @@ function handleError(res, reason, message, code) {
 }
 
 app.get("/api/debug/mongodb", function(req, res) {
-	res.status(200).json(process.env.MONGODB_URI);
+	res.status(200).json(process.env.MONGODB_URI || dbString);
 });
 
 app.get("/api/users", function(req, res) {
